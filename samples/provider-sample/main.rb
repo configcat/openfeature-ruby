@@ -11,9 +11,10 @@ OpenFeature::SDK.configure do |config|
     sdk_key: "PKDVCLf-Hq-h-kCzMp-L7Q/HhOWfwVtZ0mb30i9wi17GQ",
     # Configure the ConfigCat SDK.
     options: ConfigCat::ConfigCatOptions.new(
-      polling_mode: ConfigCat::PollingMode::auto_poll(poll_interval_seconds: 5),
+      polling_mode: ConfigCat::PollingMode.auto_poll(poll_interval_seconds: 5),
       offline: false
-    )))
+    )
+  ))
 end
 
 # Create a client.
@@ -31,7 +32,7 @@ evaluation_context = OpenFeature::SDK::EvaluationContext.new(
 flag_details = client.fetch_boolean_details(
   flag_key: "isPOCFeatureEnabled",
   default_value: false,
-  evaluation_context: evaluation_context,
+  evaluation_context: evaluation_context
 )
 
-puts(JSON::dump(flag_details))
+puts(JSON.dump(flag_details))
