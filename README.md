@@ -27,7 +27,7 @@ OpenFeature::SDK.configure do |config|
     sdk_key: "<YOUR-CONFIGCAT-SDK-KEY>",
     # Build options for the ConfigCat SDK.
     options: ConfigCat::ConfigCatOptions.new(
-      polling_mode: ConfigCat::PollingMode::auto_poll(poll_interval_seconds: 5),
+      polling_mode: ConfigCat::PollingMode.auto_poll,
       offline: false
     )))
 end
