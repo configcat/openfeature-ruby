@@ -19,6 +19,8 @@ gem install configcat-openfeature-provider
 The initializer of `ConfigCat::OpenFeature::Provider` takes the SDK key and an optional `ConfigCat::ConfigCatOptions` argument containing the additional configuration options for the [ConfigCat Ruby SDK](https://github.com/configcat/ruby-sdk):
 
 ```ruby
+require "configcat-openfeature-provider"
+
 # Configure the OpenFeature API with the ConfigCat provider.
 OpenFeature::SDK.configure do |config|
   config.set_provider(ConfigCat::OpenFeature::Provider.new(
