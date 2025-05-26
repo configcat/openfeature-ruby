@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 RSpec.describe ConfigCat::OpenFeature::Provider do
-  subject(:provider) do
-    opts = ConfigCat::ConfigCatOptions.new(flag_overrides: ConfigCat::LocalFileFlagOverrides.new(
-      File.join(File.dirname(__FILE__), "data/test_json_complex.json"),
-      ConfigCat::OverrideBehaviour::LOCAL_ONLY
-    ))
-    described_class.new(sdk_key: "localhost", options: opts)
-  end
+  opts = ConfigCat::ConfigCatOptions.new(flag_overrides: ConfigCat::LocalFileFlagOverrides.new(
+    File.join(File.dirname(__FILE__), "data/test_json_complex.json"),
+    ConfigCat::OverrideBehaviour::LOCAL_ONLY
+  ))
+  provider = described_class.new(sdk_key: "localhost", options: opts)
 
   context "metadata" do
     it "metadata is defined" do

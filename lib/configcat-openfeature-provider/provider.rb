@@ -71,7 +71,7 @@ module ConfigCat
 
       def fetch_object_value(flag_key:, default_value:, evaluation_context: nil)
         user = ctx_to_user(evaluation_context)
-        evaluation_detail = @client.get_value_details(flag_key, default_value, user)
+        evaluation_detail = @client.get_value_details(flag_key, "", user)
 
         unless evaluation_detail.value.is_a?(String)
           return type_mismatch(default_value)
