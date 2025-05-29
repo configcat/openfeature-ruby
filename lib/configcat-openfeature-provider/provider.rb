@@ -157,6 +157,10 @@ module ConfigCat
       #
       # @return [String]
       private def produce_reason(evaluation_detail)
+        unless evaluation_detail.error.nil?
+          return ::OpenFeature::SDK::Provider::Reason::ERROR
+        end
+
         if !evaluation_detail.matched_targeting_rule.nil? || !evaluation_detail.matched_percentage_option.nil?
           return ::OpenFeature::SDK::Provider::Reason::TARGETING_MATCH
         end
