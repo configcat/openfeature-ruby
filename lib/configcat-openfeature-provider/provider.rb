@@ -83,6 +83,7 @@ module ConfigCat
         rescue JSON::ParserError, TypeError
           return ::OpenFeature::SDK::Provider::ResolutionDetails.new(
             value: default_value,
+            error_code: ::OpenFeature::SDK::Provider::ErrorCode::TYPE_MISMATCH,
             error_message: "Could not parse '#{result.value}' as JSON",
             reason: ::OpenFeature::SDK::Provider::Reason::ERROR
           )
