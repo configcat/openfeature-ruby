@@ -1,7 +1,7 @@
 # ConfigCat OpenFeature Provider for Ruby
 
 [![Build Status](https://github.com/configcat/openfeature-ruby/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/configcat/openfeature-ruby/actions/workflows/ci.yml)
-[![Gem version](https://badge.fury.io/rb/configcat-openfeature-provider.svg)](https://rubygems.org/gems/configcat-openfeature-provider)
+[![Gem Version](https://badge.fury.io/rb/configcat-openfeature-provider.svg?icon=si%3Arubygems)](https://badge.fury.io/rb/configcat-openfeature-provider)
 
 This repository contains an OpenFeature provider that allows [ConfigCat](https://configcat.com) to be used with the [OpenFeature Ruby SDK](https://github.com/open-feature/ruby-sdk).
 
