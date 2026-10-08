@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 
   spec.homepage = "https://configcat.com"
 
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = ">= 3.4"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/configcat/openfeature-ruby"
@@ -31,8 +31,11 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "configcat", "~> 8.0.1"
-  spec.add_dependency "openfeature-sdk", "~> 0.4.0"
+  spec.add_dependency "configcat", "~> 9.0"
+  spec.add_dependency "openfeature-sdk", "~> 0.6"
+  if Gem::Version.new(RUBY_VERSION) > Gem::Version.new("4.0")
+    spec.add_dependency "logger", "~> 1.7"
+  end
 
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.12"
