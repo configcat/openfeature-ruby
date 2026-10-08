@@ -6,7 +6,7 @@
 This repository contains an OpenFeature provider that allows [ConfigCat](https://configcat.com) to be used with the [OpenFeature Ruby SDK](https://github.com/open-feature/ruby-sdk).
 
 ## Requirements
-- Ruby >= 3.1
+- Ruby >= 3.4
 
 ## Installation
 
