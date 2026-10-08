@@ -33,6 +33,9 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "configcat", "~> 9.0"
   spec.add_dependency "openfeature-sdk", "~> 0.6"
+  if Gem::Version.new(RUBY_VERSION) > Gem::Version.new("4.0")
+    spec.add_dependency "logger", "~> 1.7"
+  end
 
   spec.add_development_dependency "rake", "~> 13.0"
   spec.add_development_dependency "rspec", "~> 3.12"
