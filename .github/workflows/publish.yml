@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v7
     - uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 3.2
+        ruby-version: 3.4
     - name: Publish to RubyGems
       run: |
         mkdir -p $HOME/.gem
